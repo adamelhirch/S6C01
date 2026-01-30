@@ -9,7 +9,8 @@
 - **Natalia ROS** - [@rsnataliaa](https://github.com/rsnataliaa)
 - **Ewen MONTOUT** - [@ewen-montout](https://github.com/ewen-montout)
 - **Manolo BRACH** - [@reyyko](https://github.com/reyyko)
-
+- **Lotfi MELOUANE** - [@lotfimln](https://github.com/lotfimln)
+- 
 ## 📖 Description
 
 Projet d'analyse de données Yelp utilisant Python, Machine Learning et NLP. L'objectif est d'explorer le dataset Yelp Academic pour extraire des insights sur les commerces, les avis clients et les comportements utilisateurs.

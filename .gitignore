@@ -35,9 +35,10 @@ venv.bak/
 *.ipynb_checkpoints/
 
 # Data files (trop volumineux pour Git)
-data/raw/*.json
-data/cleaned/*.parquet
-data/cleaned/*.csv
+data/**/*.json
+data/**/*.parquet
+data/**/*.csv
+!data/README.md
 *.pkl
 *.pickle
 
@@ -57,11 +58,14 @@ outputs/*.png
 outputs/*.jpg
 outputs/*.pdf
 
-# BMAD (local config)
+# BMAD et Claude (configuration locale)
 _bmad/
 _bmad-output/
 .claude/
 .claude-project.md
+
+# Sujet (fichiers PDF volumineux)
+sujet/**/*.pdf
 
 # Secrets
 .env
