@@ -12,8 +12,8 @@ Ce dossier contient les données du projet Yelp.
 data/
 ├── raw/                    # Données brutes JSON (NON versionnées)
 │   ├── yelp_academic_dataset_business.json
-│   ├── yelp_academic_reviews4students.json
-│   └── yelp_academic_dataset_user4students.json
+│   ├── yelp_academic_reviews4students.jsonl
+│   └── yelp_academic_dataset_user4students.jsonl
 │
 └── cleaned/                # Données nettoyées en parquet (NON versionnées)
     ├── business_clean.parquet

@@ -51,8 +51,8 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk
 1. Téléchargez les 3 fichiers JSON depuis le sujet
 2. Placez-les dans `data/raw/`:
    - `yelp_academic_dataset_business.json`
-   - `yelp_academic_reviews4students.json`
-   - `yelp_academic_dataset_user4students.json`
+   - `yelp_academic_reviews4students.jsonl`
+   - `yelp_academic_dataset_user4students.jsonl`
 
 **⚠️ Important:** Les fichiers JSON ne sont PAS versionnés sur Git (trop gros). Chacun doit les avoir localement.
 

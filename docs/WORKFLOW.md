@@ -42,8 +42,8 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk
 
 Placez les fichiers JSON Yelp dans `data/raw/`:
 - `yelp_academic_dataset_business.json`
-- `yelp_academic_reviews4students.json`
-- `yelp_academic_dataset_user4students.json`
+- `yelp_academic_reviews4students.jsonl`
+- `yelp_academic_dataset_user4students.jsonl`
 
 ## 🔄 Workflow Quotidien
 
