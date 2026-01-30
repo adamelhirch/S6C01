@@ -176,9 +176,6 @@ S6C01/
 │   └── ...
 │
 ├── src/                  # Code source réutilisable
-│   ├── data_loading.py   # Chargement JSON
-│   ├── data_cleaning.py  # Nettoyage données
-│   └── preprocessing.py  # Preprocessing NLP
 │
 ├── outputs/              # Visualisations et rapports
 │   ├── figures/

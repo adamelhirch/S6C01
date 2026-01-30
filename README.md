@@ -50,9 +50,7 @@ S6C01-Yelp-Analysis/
 │   └── ...
 │
 ├── src/                       # Code source Python
-│   ├── data_cleaning.py
-│   ├── preprocessing.py
-│   └── utils.py
+
 │
 ├── outputs/                   # Visualisations et rapports
 │   ├── figures/
