@@ -6,7 +6,9 @@
 ## 👥 Équipe
 
 - **Adam EL HIRCH** - [@adamelhirch](https://github.com/adamelhirch)
-- *(Ajoutez vos coéquipiers ici)*
+- **Natalia ROS** - [@rsnataliaa](https://github.com/rsnataliaa)
+- **Ewen MONTOUT** - [@ewen-montout](https://github.com/ewen-montout)
+- **Manolo BRACH** - [@reyyko](https://github.com/reyyko)
 
 ## 📖 Description
 
