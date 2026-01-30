@@ -36,6 +36,7 @@ venv.bak/
 
 # Data files (trop volumineux pour Git)
 data/**/*.json
+data/**/*.jsonl
 data/**/*.parquet
 data/**/*.csv
 !data/README.md
