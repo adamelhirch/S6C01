@@ -67,6 +67,16 @@ S6C01-Yelp-Analysis/
 
 ## 🚀 Installation
 
+### 🆕 Nouveau collaborateur?
+
+**👉 Suivez le guide de démarrage rapide: [docs/QUICKSTART.md](docs/QUICKSTART.md)**
+
+Ce guide vous accompagne pas à pas pour configurer votre environnement et créer votre première branche en 30 minutes!
+
+---
+
+### Installation manuelle
+
 ### 1. Cloner le repository
 
 ```bash

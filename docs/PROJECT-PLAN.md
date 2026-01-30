@@ -41,18 +41,15 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 
 **Total Phase 3:** 8 points (~8h)
 
-#### Phase 4: Analyses Exploratoires (SAE-67, 68, 95, 99-101)
+#### Phase 4: Dashboards du Sujet (SAE-67, 68, 95, 69)
 - SAE-67: Dashboard Profils Reviewers (3pts) - High
 - SAE-68: Dashboard Performance Établissements (3pts) - High
 - SAE-95: Dashboard Analyse Sémantique (3pts) - High
-- SAE-99: Analyse Temporelle (3pts) - High
-- SAE-100: Analyse Géographique (3pts) - High
-- SAE-101: Analyse Corrélations (2pts) - Urgent
 - SAE-69: Échantillonnage (si nécessaire) (2pts) - Medium
 
-**Total Phase 4:** 19 points (~19-22h)
+**Total Phase 4:** 11 points (~11-13h)
 
-**TOTAL EPIC 1:** 45 points (~45-50h pour l'équipe)
+**TOTAL EPIC 1:** 37 points (~37-42h pour l'équipe)
 
 ---
 
@@ -139,15 +136,15 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 
 | Epic | Points | Heures estimées | Dates |
 |------|--------|-----------------|-------|
-| Epic 1 | 45 | 45-50h | 27 jan - 31 jan |
+| Epic 1 | 37 | 37-42h | 27 jan - 31 jan |
 | Epic 2 | 11 | 11-13h | 1 fév - 5 fév |
 | Epic 3 | 14 | 14-16h | 6 fév - 12 fév |
 | Epic 4 | 17 | 17-20h | 13 fév - 18 fév |
 | Epic 5 | 17 | 17-20h | 19 fév - 24 fév |
 | Epic 6 | 18 | 18-20h | 25 fév - 28 fév |
-| **TOTAL** | **122** | **122-139h** | **8 semaines** |
+| **TOTAL** | **114** | **114-131h** | **8 semaines** |
 
-**Charge par personne:** ~30-35h (équipe de 4)
+**Charge par personne:** ~28-33h (équipe de 4)
 
 ---
 
@@ -226,10 +223,7 @@ Documentation et présentation
 - Duel des mots (TF-IDF Word Clouds)
 - Indice de satisfaction
 
-✅ **Analyses complémentaires:**
-- Temporelle (SAE-99)
-- Géographique (SAE-100)
-- Corrélations (SAE-101)
+✅ **Focus sur les 3 dashboards du sujet uniquement**
 
 ### 5. **Équilibrage de la charge**
 
@@ -253,12 +247,12 @@ Documentation et présentation
 
 ### Risques identifiés
 
-1. **Epic 1 très chargé (45pts)**
+1. **Epic 1 chargé (37pts)**
    - **Mitigation:** Paralléliser les tâches entre membres de l'équipe
    - Setup (SAE-58-63): Personne A
    - Chargement (SAE-64-66): Personne B
    - Nettoyage (SAE-96-98): Personne C
-   - Dashboards (SAE-67-68-95): Personne D
+   - Dashboards (SAE-67-68-95): Personne D (peut être partagé)
 
 2. **Dépendances strictes**
    - **Mitigation:** Ne pas commencer un Epic avant que le précédent soit validé
@@ -285,9 +279,7 @@ Documentation et présentation
 4. SAE-96, 97, 98 → Nettoyage des données
 
 **Priorité 2 (Semaine prochaine):**
-5. SAE-67, 68, 95 → Les 3 dashboards principaux
-6. SAE-101 → Analyse corrélations
-7. SAE-99, 100 → Analyses temporelles/géo (si temps)
+5. SAE-67, 68, 95 → Les 3 dashboards du sujet
 
 ### Organisation équipe
 
