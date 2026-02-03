@@ -3,6 +3,39 @@
 **Projet SAE S6C01 - Analyse de Grandes Données**
 **BUT Informatique - Semestre 6 (2025-2026)**
 
+---
+
+## 🤖 AI Context (Antigravity, Claude & assistants IA)
+
+> **Type de projet**: Data Science / Machine Learning / NLP (Analyse de données Yelp)  
+> **Environnement**: Python 3.12+ avec Jupyter Notebooks  
+> **Méthodologie**: Agile (Linear) + Git/GitHub
+
+### 🛠️ Technologies principales
+- **Data**: `pandas`, `numpy` (manipulation), `parquet` (stockage optimisé)
+- **Viz**: `matplotlib`, `seaborn`, `plotly`
+- **NLP**: `nltk`, `scikit-learn`, `transformers`
+- **ML**: `scikit-learn`, `torch` (PyTorch)
+- **Notebooks**: `jupyter`
+
+### 📊 Architecture des données
+```
+data/raw/*.json → notebooks/XX_*.ipynb → data/cleaned/*.parquet → outputs/
+```
+
+### 🔧 Workflows disponibles
+- **Antigravity**: `.agent/workflows/` - `/setup-environment`, `/start-development`, `/run-jupyter`, `/data-pipeline`
+- **Claude**: `.claude/PROJECT_CONTEXT.md` - Documentation complète
+- **Instructions IA**: `docs/AI_INSTRUCTIONS.md`
+
+### ⚠️ Points CRITIQUES
+- 🚨 **Fichiers JSON dans `data/raw/` NON versionnés** (trop volumineux ~6 GB)
+- 🔄 **Toujours travailler dans une branche** (format: `prenom/sae-XX-description`)
+- 📝 **Commits avec Linear** (format: `SAE-XX Description`)
+- 🐍 **Toujours activer le venv** (`source venv/bin/activate`)
+
+---
+
 ## 👥 Équipe
 
 - **Adam EL HIRCH** - [@adamelhirch](https://github.com/adamelhirch)
@@ -180,7 +213,7 @@ Ensuite sur GitHub:
 
 ## 🛠️ Technologies
 
-- **Python 3.11+**
+- **Python 3.12+**
 - **Pandas** - Manipulation de données
 - **Matplotlib/Seaborn** - Visualisations
 - **NLTK/Scikit-learn** - NLP et ML
