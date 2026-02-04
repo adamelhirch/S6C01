@@ -23,10 +23,32 @@
 data/raw/*.json → notebooks/XX_*.ipynb → data/cleaned/*.parquet → outputs/
 ```
 
-### 🔧 Workflows disponibles
-- **Antigravity**: `.agent/workflows/` - `/setup-environment`, `/start-development`, `/run-jupyter`, `/data-pipeline`
-- **Claude**: `.claude/PROJECT_CONTEXT.md` - Documentation complète
-- **Instructions IA**: `docs/AI_INSTRUCTIONS.md`
+### 🔧 Workflows et Documentation
+
+**Pour les IA (Antigravity, claude-cli):**
+- `.claude/PROJECT_CONTEXT.md` - **Chargé automatiquement** - Contexte complet du projet
+- `.agent/workflows/` - Workflows Antigravity (`/setup-environment`, `/start-development`, etc.)
+- `docs/AI_INSTRUCTIONS.md` - Conventions de code et patterns
+
+**Pour les humains (guides détaillés):**
+- `docs/QUICKSTART.md` - 🚀 Guide démarrage rapide
+- `docs/WORKFLOW_SETUP.md` - Configuration environnement
+- `docs/WORKFLOW_DEVELOPMENT.md` - Workflow Git complet
+- `docs/WORKFLOW_JUPYTER.md` - Travailler avec Jupyter
+- `docs/WORKFLOW_LINEAR_INTEGRATION.md` - Intégration Linear ↔ GitHub
+- `docs/PROJECT-PLAN.md` - Plan du projet (Epics/Stories)
+
+**Voir [`docs/README.md`](docs/README.md) pour l'index complet.**
+
+### 🤖 Intégration Linear ↔ GitHub (Automatique)
+
+Les assistants IA avec MCP Linear et GitHub automatisent:
+- ✅ Ajout des liens de branche dans Linear
+- ✅ Création de PR quand story terminée
+- ✅ Ajout du lien PR dans Linear
+- ✅ Passage en "In Review" automatique
+
+Voir `.claude/PROJECT_CONTEXT.md` pour les détails.
 
 ### ⚠️ Points CRITIQUES
 - 🚨 **Fichiers JSON dans `data/raw/` NON versionnés** (trop volumineux ~6 GB)

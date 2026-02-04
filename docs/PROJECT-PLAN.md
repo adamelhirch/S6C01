@@ -1,6 +1,6 @@
 # Plan de Projet S6C01 - Analyse Yelp
 
-**Dernière mise à jour:** 30 janvier 2026
+**Dernière mise à jour:** 3 février 2026 (Synchronisé avec Linear)
 
 ## 🎯 Vue d'ensemble
 
@@ -18,34 +18,34 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 **Objectif:** Configuration environnement + chargement et nettoyage des données JSON
 
 #### Phase 1: Setup (SAE-58 à SAE-63)
-- ✅ SAE-58: Configuration Python venv (1pt) - Urgent
-- ✅ SAE-59: Installation dépendances (2pts) - Urgent
-- ✅ SAE-60: Structure dossiers + .gitignore (2pts) - Urgent
-- ✅ SAE-61: Configuration GitHub (3pts) - Urgent
-- SAE-62: Configuration Linear ↔ GitHub (2pts) - Urgent
-- SAE-63: Configuration Jupyter (2pts) - High
+- ✅ SAE-58: Configuration Python venv (1pt) - Done
+- ✅ SAE-59: Installation dépendances (2pts) - Done
+- ✅ SAE-60: Structure dossiers + .gitignore (2pts) - Done
+- ✅ SAE-61: Configuration GitHub (3pts) - Done
+- ✅ SAE-62: Configuration Linear ↔ GitHub (2pts) - Done
+- ✅ SAE-63: Configuration Jupyter (2pts) - Done
 
 **Total Phase 1:** 12 points (~12-15h)
 
 #### Phase 2: Chargement JSON (SAE-64 à SAE-66)
-- SAE-64: Chargement Business JSON (2pts) - High
-- SAE-65: Chargement Reviews JSON (2pts) - High
-- SAE-66: Chargement Users JSON (2pts) - High
+- ✅ SAE-64: Chargement Business JSON (2pts) - Done
+- ✅ SAE-65: Chargement Reviews JSON (2pts) - Done
+- ✅ SAE-66: Chargement Users JSON (2pts) - Done
 
 **Total Phase 2:** 6 points (~6h)
 
 #### Phase 3: Nettoyage Données (SAE-96 à SAE-98)
-- SAE-96: Nettoyage Business (3pts) - Urgent
-- SAE-97: Nettoyage Reviews (3pts) - Urgent
-- SAE-98: Nettoyage Users (2pts) - High
+- ✅ SAE-96: Nettoyage Business (3pts) - Done
+- ✅ SAE-97: Nettoyage Reviews (3pts) - Done
+- ✅ SAE-98: Nettoyage Users (2pts) - Done
 
 **Total Phase 3:** 8 points (~8h)
 
 #### Phase 4: Dashboards du Sujet (SAE-67, 68, 95, 69)
-- SAE-67: Dashboard Profils Reviewers (3pts) - High
-- SAE-68: Dashboard Performance Établissements (3pts) - High
-- SAE-95: Dashboard Analyse Sémantique (3pts) - High
-- SAE-69: Échantillonnage (si nécessaire) (2pts) - Medium
+- ✅ SAE-67: Dashboard Profils Reviewers (3pts) - Done
+- 🔄 SAE-68: Dashboard Performance Établissements (3pts) - In Progress
+- ✅ SAE-95: Dashboard Analyse Sémantique (3pts) - Done
+- ⏸️ SAE-69: Échantillonnage (si nécessaire) (2pts) - Backlog
 
 **Total Phase 4:** 11 points (~11-13h)
 
@@ -56,13 +56,13 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 ### **Epic 2 - Preprocessing & Text Cleaning** (1 fév - 5 fév)
 **Objectif:** Preprocessing NLP des avis textuels
 
-**Prérequis:** SAE-97 (Nettoyage Reviews) terminé
+**Prérequis:** ✅ SAE-97 (Nettoyage Reviews) terminé
 
-- SAE-70: Nettoyage Texte Basique (2pts) - Urgent
-- SAE-71: Tokenization NLTK (2pts) - High
-- SAE-72: Suppression Stopwords (2pts) - High
-- SAE-73: Lemmatization (2pts) - High
-- SAE-74: Pipeline Preprocessing Complet (3pts) - Urgent
+- 🔄 SAE-70: Nettoyage Texte Basique (2pts) - In Review
+- ⏸️ SAE-71: Tokenization NLTK (2pts) - Todo
+- ⏸️ SAE-72: Suppression Stopwords (2pts) - Todo
+- ⏸️ SAE-73: Lemmatization (2pts) - Todo
+- ⏸️ SAE-74: Pipeline Preprocessing Complet (3pts) - Todo
 
 **TOTAL EPIC 2:** 11 points (~11-13h)
 
@@ -71,13 +71,14 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 ### **Epic 3 - Text Representation** (6 fév - 12 fév)
 **Objectif:** Représentation textuelle (TF-IDF, Word2Vec, embeddings)
 
-**Prérequis:** Epic 2 terminé
+**Prérequis:** Epic 2 en cours
 
-- SAE-36: TF-IDF Vectorization (3pts)
-- SAE-37: Analyse TF-IDF (mots importants) (2pts)
-- SAE-38: Word2Vec Training (4pts)
-- SAE-39: Visualisation Word Embeddings (3pts)
-- SAE-40: Similarité sémantique (2pts)
+- ⏸️ SAE-75: TF-IDF Vectorization Basique (3pts) - Backlog
+- ⏸️ SAE-76: TF-IDF Optimisé (paramètres, n-grams) (2pts) - Backlog
+- ⏸️ SAE-77: Word2Vec Training (4pts) - Backlog
+- ⏸️ SAE-78: Document Embeddings (averaging Word2Vec) (3pts) - Backlog
+- ⏸️ SAE-79: Visualisation t-SNE des Embeddings (2pts) - Backlog
+- ⏸️ SAE-80: Analyse Fréquences de Mots (2pts) - Backlog
 
 **TOTAL EPIC 3:** 14 points (~14-16h)
 
@@ -89,17 +90,17 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 **Prérequis:** Epic 3 terminé
 
 #### Classification
-- SAE-41: Préparation dataset classification (2pts)
-- SAE-42: Logistic Regression baseline (2pts)
-- SAE-43: Random Forest / SVM (3pts)
-- SAE-44: Évaluation et comparaison modèles (2pts)
+- ⏸️ SAE-81: Classification Baseline - Logistic Regression (2pts) - Backlog
+- ⏸️ SAE-82: Comparaison Modèles ML (SVM, RF, NB) (3pts) - Backlog
 
 #### Clustering
-- SAE-45: K-Means Clustering (3pts)
-- SAE-46: Visualisation clusters (2pts)
+- ⏸️ SAE-83: Clustering K-Means des Commerces (3pts) - Backlog
+
+#### Analyse Statistique
+- ⏸️ SAE-84: Analyse Statistique des Ratings (2pts) - Backlog
 
 #### Recommandation
-- SAE-47: Système de recommandation basique (3pts)
+- ⏸️ SAE-85: Système de Recommandation Simple (3pts) - Backlog
 
 **TOTAL EPIC 4:** 17 points (~17-20h)
 
@@ -108,12 +109,12 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 ### **Epic 5 - LLM Local (HuggingFace)** (19 fév - 24 fév)
 **Objectif:** LLMs locaux avec HuggingFace (BERT, sentiment analysis)
 
-**Prérequis:** Epic 4 terminé
+**Prérequis:** Epic 4 non commencé
 
-- SAE-48: BERT Classification Sentiment (4pts)
-- SAE-49: Génération Résumés (4pts)
-- SAE-50: Fine-tuning BERT (optionnel) (6pts)
-- SAE-51: Comparaison LLM vs ML Classique (3pts)
+- ⏸️ SAE-86: Setup HuggingFace Transformers (2pts) - Backlog
+- ⏸️ SAE-87: BERT Classification Sentiment (4pts) - Backlog
+- ⏸️ SAE-88: Génération Résumés avec LLM (4pts) - Backlog
+- ⏸️ SAE-89: Comparaison Finale LLM vs ML (3pts) - Backlog
 
 **TOTAL EPIC 5:** 17 points (~17-20h)
 
@@ -122,11 +123,26 @@ Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learn
 ### **Epic 6 - Documentation & Rendu Final** (25 fév - 28 fév)
 **Objectif:** Finalisation, visualisations, rapport et présentation
 
-- SAE-52: Notebook Final Structuration (4pts)
-- SAE-53: Visualisations Finales (3pts)
-- SAE-54: Rapport Technique (5pts)
-- SAE-55: README et Documentation Code (2pts)
-- SAE-56: Préparation Présentation Orale (4pts)
+- ⏸️ SAE-90: Notebook Final Structuré (4pts) - Backlog
+- ⏸️ SAE-91: README Complet (2pts) - Backlog
+- ⏸️ SAE-92: Rapport Technique PDF (5pts) - Backlog
+- ⏸️ SAE-93: Présentation Orale + Slides (4pts) - Backlog
+- ⏸️ SAE-94: Visualisations Finales & Dashboard (3pts) - Backlog
+- ⏸️ SAE-54: README et Documentation Code (2pts) - Backlog
+
+### **Stories hors Epic / Analyse supplémentaires**
+
+- ✅ SAE-102: Créer une librairie partagée pour réutilisation du code - Done
+- 🔄 SAE-103: Add comprehensive documentation and Linear-GitHub integration - In Review
+- ⏸️ SAE-99: Analyse Temporelle des Avis - Backlog
+- ⏸️ SAE-100: Analyse Géographique (Villes/États) - Backlog
+- ⏸️ SAE-101: Analyse de Corrélation Multi-variables - Backlog
+
+### **Stories de configuration (Meta)**
+
+- ⏸️ SAE-55: [Epic 1] Configuration Repository GitHub Collaboratif - Backlog
+- ⏸️ SAE-56: [Epic 1] Setup Système Documentation par Story - Backlog
+- ⏸️ SAE-57: [Epic 1] Configuration Linear comme Source de Vérité + Intégration GitHub - Backlog
 
 **TOTAL EPIC 6:** 18 points (~18-20h)
 
