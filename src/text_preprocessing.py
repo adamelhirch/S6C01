@@ -115,28 +115,15 @@ def remove_stopwords(tokens: List[str], exclude: Set[str] = None) -> List[str]:
     return [token for token in tokens if token.lower() not in current_stop_words]
 
 
-def preprocess_text(text: str) -> str:
+def clean_text(text: str) -> str:
     """
-    Clean and normalize text for NLP tasks.
-    
-    This is the main preprocessing function that combines multiple steps:
-    - Lowercase conversion
-    - URL and email removal
-    - Keep only letters, numbers, and spaces
-    - Tokenization
-    - Stopword removal
-    - Lemmatization
+    Basic text cleaning: lowercase, remove URLs/emails, keep only alphanumeric and spaces.
     
     Args:
-        text: Input text to preprocess
-    
+        text: Input text
+        
     Returns:
-        Cleaned and normalized text as a single string
-    
-    Example:
-        >>> text = "The restaurants are AMAZING! Check http://example.com"
-        >>> preprocess_text(text)
-        'restaurant amazing check'
+        Cleaned text string
     """
     # Lowercase
     text = text.lower()
@@ -147,15 +134,60 @@ def preprocess_text(text: str) -> str:
     # Keep only letters, numbers, spaces
     text = re.sub(r'[^a-z0-9\s]', '', text)
     
-    # Tokenize
-    tokens = word_tokenize(text)
+    return text
+
+
+def preprocess_text(text: str) -> str:
+    """
+    Legacy function: Clean and normalize text for NLP tasks.
     
-    # Remove stopwords and lemmatize
-    lemmatizer = _get_lemmatizer()
-    stop_words = _get_stopwords()
-    tokens = [lemmatizer.lemmatize(t) for t in tokens if t not in stop_words]
+    This function is maintained for backward compatibility.
+    It performs: clean -> tokenize -> remove stopwords -> lemmatize -> join.
+    """
+    # 1. Clean
+    text_clean = clean_text(text)
+    
+    # 2. Pipeline sequence
+    tokens = tokenize_text(text_clean)
+    tokens = remove_stopwords(tokens)
+    tokens = lemmatize_tokens(tokens)
     
     return ' '.join(tokens)
+
+
+def preprocess_pipeline(
+    text: str, 
+    remove_stopwords_flag: bool = True, 
+    lemmatize_flag: bool = True,
+    exclude_stopwords: Set[str] = None
+) -> List[str]:
+    """
+    Complete preprocessing pipeline.
+    
+    Args:
+        text: Input text
+        remove_stopwords_flag: Whether to remove stopwords
+        lemmatize_flag: Whether to lemmatize tokens
+        exclude_stopwords: Set of words to keep (e.g. {'not', 'no'})
+        
+    Returns:
+        List of processed tokens
+    """
+    # 1. Clean
+    text = clean_text(text)
+    
+    # 2. Tokenize
+    tokens = tokenize_text(text)
+    
+    # 3. Stopwords
+    if remove_stopwords_flag:
+        tokens = remove_stopwords(tokens, exclude=exclude_stopwords)
+        
+    # 4. Lemmatize
+    if lemmatize_flag:
+        tokens = lemmatize_tokens(tokens)
+        
+    return tokens
 
 
 def tokenize_text(text: str) -> List[str]:
