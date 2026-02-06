@@ -173,3 +173,23 @@ def tokenize_text(text: str) -> List[str]:
         ['Do', "n't", 'hesitate', '!']
     """
     return word_tokenize(text)
+
+
+def lemmatize_tokens(tokens: List[str]) -> List[str]:
+    """
+    Lemmatize a list of tokens.
+    
+    Args:
+        tokens: List of tokens
+        
+    Returns:
+        List of lemmatized tokens
+        
+    Example:
+        >>> tokens = ['running', 'better', 'cars']
+        >>> lemmatize_tokens(tokens)
+        ['running', 'better', 'car'] 
+        # Note: default NLTK lemmatizer treats words as nouns by default unless POS tags are provided
+    """
+    lemmatizer = _get_lemmatizer()
+    return [lemmatizer.lemmatize(token) for token in tokens]
