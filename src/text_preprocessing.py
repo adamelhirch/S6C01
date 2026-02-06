@@ -87,23 +87,32 @@ def tokenize_and_lemmatize(text: str, remove_stops: bool = True) -> List[str]:
     return tokens
 
 
-def remove_stopwords(tokens: List[str]) -> List[str]:
+def remove_stopwords(tokens: List[str], exclude: Set[str] = None) -> List[str]:
     """
     Remove English stopwords from token list.
     
     Args:
         tokens: List of tokens
+        exclude: Set of words to exclude from removal (they will be KEPT in the text).
+                 Useful for keeping negation words like 'no', 'not'.
     
     Returns:
         Filtered list without stopwords
     
     Example:
-        >>> tokens = ['the', 'cat', 'is', 'here']
-        >>> remove_stopwords(tokens)
-        ['cat', 'here']
+        >>> tokens = ['the', 'cat', 'is', 'not', 'here']
+        >>> remove_stopwords(tokens, exclude={'not'})
+        ['cat', 'not', 'here']
     """
     stop_words = _get_stopwords()
-    return [token for token in tokens if token not in stop_words]
+    
+    if exclude:
+        # Create a new set for this call to avoid modifying the global set
+        current_stop_words = stop_words - set(exclude)
+    else:
+        current_stop_words = stop_words
+        
+    return [token for token in tokens if token.lower() not in current_stop_words]
 
 
 def preprocess_text(text: str) -> str:
