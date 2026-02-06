@@ -147,3 +147,20 @@ def preprocess_text(text: str) -> str:
     tokens = [lemmatizer.lemmatize(t) for t in tokens if t not in stop_words]
     
     return ' '.join(tokens)
+
+
+def tokenize_text(text: str) -> List[str]:
+    """
+    Tokenize text into a list of words using NLTK.
+    
+    Args:
+        text: Input text
+        
+    Returns:
+        List of tokens
+        
+    Example:
+        >>> tokenize_text("Don't hesitate!")
+        ['Do', "n't", 'hesitate', '!']
+    """
+    return word_tokenize(text)
