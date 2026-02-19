@@ -18,7 +18,8 @@ data/
 └── cleaned/                # Données nettoyées en parquet (NON versionnées)
     ├── business_clean.parquet
     ├── reviews_clean.parquet
-    └── users_clean.parquet
+    ├── users_clean.parquet
+    └── reviews_embeddings.parquet   # Embeddings LLM (SAE-112)
 ```
 
 ## Installation des données
@@ -33,6 +34,7 @@ Les fichiers `.parquet` sont générés par les notebooks suivants:
 - `business_clean.parquet` → SAE-96 (Nettoyage Business)
 - `reviews_clean.parquet` → SAE-97 (Nettoyage Reviews)
 - `users_clean.parquet` → SAE-98 (Nettoyage Users)
+- `reviews_embeddings.parquet` → SAE-112 (Extraction embeddings LLM DistilBERT)
 
 ## Format Parquet
 

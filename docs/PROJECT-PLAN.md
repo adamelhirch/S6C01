@@ -1,325 +1,136 @@
 # Plan de Projet S6C01 - Analyse Yelp
 
-**Dernière mise à jour:** 3 février 2026 (Synchronisé avec Linear)
-
-## 🎯 Vue d'ensemble
-
-Projet d'analyse du dataset Yelp Academic utilisant Python, NLP et Machine Learning.
-
-**Durée estimée:** 8-10 semaines (27 jan - 28 fév 2026)
-**Équipe:** 4 personnes
-**Livrables:** Notebooks Jupyter + Rapport + Présentation
+**Synchronisé avec Linear — Dernière mise à jour: 19 février 2026**
 
 ---
 
-## 📋 Structure des Epics
+## Epic 1 - Setup & Data Loading ✅
 
-### **Epic 1 - Setup & Data Loading** (27 jan - 31 jan)
-**Objectif:** Configuration environnement + chargement et nettoyage des données JSON
-
-#### Phase 1: Setup (SAE-58 à SAE-63)
-- ✅ SAE-58: Configuration Python venv (1pt) - Done
-- ✅ SAE-59: Installation dépendances (2pts) - Done
-- ✅ SAE-60: Structure dossiers + .gitignore (2pts) - Done
-- ✅ SAE-61: Configuration GitHub (3pts) - Done
-- ✅ SAE-62: Configuration Linear ↔ GitHub (2pts) - Done
-- ✅ SAE-63: Configuration Jupyter (2pts) - Done
-
-**Total Phase 1:** 12 points (~12-15h)
-
-#### Phase 2: Chargement JSON (SAE-64 à SAE-66)
-- ✅ SAE-64: Chargement Business JSON (2pts) - Done
-- ✅ SAE-65: Chargement Reviews JSON (2pts) - Done
-- ✅ SAE-66: Chargement Users JSON (2pts) - Done
-
-**Total Phase 2:** 6 points (~6h)
-
-#### Phase 3: Nettoyage Données (SAE-96 à SAE-98)
-- ✅ SAE-96: Nettoyage Business (3pts) - Done
-- ✅ SAE-97: Nettoyage Reviews (3pts) - Done
-- ✅ SAE-98: Nettoyage Users (2pts) - Done
-
-**Total Phase 3:** 8 points (~8h)
-
-#### Phase 4: Dashboards du Sujet (SAE-67, 68, 95, 69)
-- ✅ SAE-67: Dashboard Profils Reviewers (3pts) - Done
-- 🔄 SAE-68: Dashboard Performance Établissements (3pts) - In Progress
-- ✅ SAE-95: Dashboard Analyse Sémantique (3pts) - Done
-- ⏸️ SAE-69: Échantillonnage (si nécessaire) (2pts) - Backlog
-
-**Total Phase 4:** 11 points (~11-13h)
-
-**TOTAL EPIC 1:** 37 points (~37-42h pour l'équipe)
+| Issue | Titre | État |
+|-------|-------|------|
+| SAE-58 | Configuration Python venv | ✅ Done |
+| SAE-59 | Installation dépendances | ✅ Done |
+| SAE-60 | Structure dossiers + .gitignore | ✅ Done |
+| SAE-61 | Configuration GitHub | ✅ Done |
+| SAE-62 | Configuration Linear + GitHub | ✅ Done |
+| SAE-63 | Configuration Jupyter | ✅ Done |
+| SAE-64 | Chargement Business JSON | ✅ Done |
+| SAE-65 | Chargement Reviews JSON | ✅ Done |
+| SAE-66 | Chargement Users JSON | ✅ Done |
+| SAE-96 | Nettoyage Business | ✅ Done |
+| SAE-97 | Nettoyage Reviews | ✅ Done |
+| SAE-98 | Nettoyage Users | ✅ Done |
+| SAE-102 | Librairie partagée src/ | ✅ Done |
 
 ---
 
-### **Epic 2 - Preprocessing & Text Cleaning** (1 fév - 5 fév)
-**Objectif:** Preprocessing NLP des avis textuels
+## Epic 2 - Preprocessing & Text Cleaning ✅
 
-**Prérequis:** ✅ SAE-97 (Nettoyage Reviews) terminé
-
-- 🔄 SAE-70: Nettoyage Texte Basique (2pts) - In Review
-- ⏸️ SAE-71: Tokenization NLTK (2pts) - Todo
-- ⏸️ SAE-72: Suppression Stopwords (2pts) - Todo
-- ⏸️ SAE-73: Lemmatization (2pts) - Todo
-- ⏸️ SAE-74: Pipeline Preprocessing Complet (3pts) - Todo
-
-**TOTAL EPIC 2:** 11 points (~11-13h)
+| Issue | Titre | État |
+|-------|-------|------|
+| SAE-70 | Nettoyage texte basique | ✅ Done |
+| SAE-71 | Tokenization NLTK | ✅ Done |
+| SAE-72 | Suppression stopwords | ✅ Done |
+| SAE-73 | Lemmatization | ✅ Done |
+| SAE-74 | Pipeline preprocessing complet | ✅ Done |
 
 ---
 
-### **Epic 3 - Text Representation** (6 fév - 12 fév)
-**Objectif:** Représentation textuelle (TF-IDF, Word2Vec, embeddings)
+## Epic 3 - Text Representation ✅ (+ 1 ajout)
 
-**Prérequis:** Epic 2 en cours
-
-- ⏸️ SAE-75: TF-IDF Vectorization Basique (3pts) - Backlog
-- ⏸️ SAE-76: TF-IDF Optimisé (paramètres, n-grams) (2pts) - Backlog
-- ⏸️ SAE-77: Word2Vec Training (4pts) - Backlog
-- ⏸️ SAE-78: Document Embeddings (averaging Word2Vec) (3pts) - Backlog
-- ⏸️ SAE-79: Visualisation t-SNE des Embeddings (2pts) - Backlog
-- ⏸️ SAE-80: Analyse Fréquences de Mots (2pts) - Backlog
-
-**TOTAL EPIC 3:** 14 points (~14-16h)
+| Issue | Titre | Notebook | Grille | État |
+|-------|-------|----------|--------|------|
+| SAE-75 | TF-IDF basique | `3-text-representation/` | — | ✅ Done |
+| SAE-76 | TF-IDF optimisé (n-grams) | `3-text-representation/` | Repr N-grammes (1pt) + TF-IDF (1pt) | ✅ Done |
+| SAE-77 | Word2Vec training | `3-text-representation/` | — | ✅ Done |
+| SAE-78 | Document embeddings | `3-text-representation/` | — | ✅ Done |
+| SAE-79 | Visualisation t-SNE | `3-text-representation/` | — | ✅ Done |
+| SAE-80 | Analyse fréquences de mots | `3-text-representation/` | — | ✅ Done |
+| **SAE-112** | **Extraction embeddings LLM (DistilBERT)** | `3-text-representation/05-llm-embeddings.ipynb` | **LLM (1pt)** | ⬜ Todo |
 
 ---
 
-### **Epic 4 - ML Classique & Analysis** (13 fév - 18 fév)
-**Objectif:** Machine Learning classique (classification, clustering, recommandation)
+## Epic 4 - ML Classique
 
-**Prérequis:** Epic 3 terminé
+**Objectif:** 4 algorithmes (LogReg, SVM, RF, NB) × 3 représentations + sélection variables
 
-#### Classification
-- ⏸️ SAE-81: Classification Baseline - Logistic Regression (2pts) - Backlog
-- ⏸️ SAE-82: Comparaison Modèles ML (SVM, RF, NB) (3pts) - Backlog
+**Tâches de prédiction:** Polarité (3 classes) et optionnellement Score (1-5)
 
-#### Clustering
-- ⏸️ SAE-83: Clustering K-Means des Commerces (3pts) - Backlog
+| Issue | Titre | Notebook | Grille | État |
+|-------|-------|----------|--------|------|
+| **SAE-114** | Classification ML sur TF-IDF | `4-ml-classique/01-ml-tfidf.ipynb` | ML-tf-idf (1pt) + ML plusieurs (4pts) | ⬜ Todo |
+| **SAE-116** | Classification ML sur N-grammes | `4-ml-classique/02-ml-ngram.ipynb` | ML et ngram (1pt) | ⬜ Todo |
+| **SAE-117** | Classification ML sur LLM embeddings | `4-ml-classique/03-ml-llm.ipynb` | ML-LLM (1pt) | ⬜ Todo |
+| **SAE-118** | Sélection de variables (SHAP) | `4-ml-classique/04-selection-variables.ipynb` | Sélection variables (1pt) | ⬜ Todo |
 
-#### Analyse Statistique
-- ⏸️ SAE-84: Analyse Statistique des Ratings (2pts) - Backlog
-
-#### Recommandation
-- ⏸️ SAE-85: Système de Recommandation Simple (3pts) - Backlog
-
-**TOTAL EPIC 4:** 17 points (~17-20h)
+**Dépendances:** SAE-117 bloqué par SAE-112. SAE-118 bloqué par SAE-114.
 
 ---
 
-### **Epic 5 - LLM Local (HuggingFace)** (19 fév - 24 fév)
-**Objectif:** LLMs locaux avec HuggingFace (BERT, sentiment analysis)
+## Epic 5 - Deep Learning & IA Générative
 
-**Prérequis:** Epic 4 non commencé
+**Objectif:** 4 approches (MLP, CNN 1D, DistilBERT fine-tuning, IA Générative) + zero-shot/few-shot + ABSA
 
-- ⏸️ SAE-86: Setup HuggingFace Transformers (2pts) - Backlog
-- ⏸️ SAE-87: BERT Classification Sentiment (4pts) - Backlog
-- ⏸️ SAE-88: Génération Résumés avec LLM (4pts) - Backlog
-- ⏸️ SAE-89: Comparaison Finale LLM vs ML (3pts) - Backlog
+**Tâches de prédiction:** Polarité (3 classes) et optionnellement Score (1-5)
 
-**TOTAL EPIC 5:** 17 points (~17-20h)
-
----
-
-### **Epic 6 - Documentation & Rendu Final** (25 fév - 28 fév)
-**Objectif:** Finalisation, visualisations, rapport et présentation
-
-- ⏸️ SAE-90: Notebook Final Structuré (4pts) - Backlog
-- ⏸️ SAE-91: README Complet (2pts) - Backlog
-- ⏸️ SAE-92: Rapport Technique PDF (5pts) - Backlog
-- ⏸️ SAE-93: Présentation Orale + Slides (4pts) - Backlog
-- ⏸️ SAE-94: Visualisations Finales & Dashboard (3pts) - Backlog
-- ⏸️ SAE-54: README et Documentation Code (2pts) - Backlog
-
-### **Stories hors Epic / Analyse supplémentaires**
-
-- ✅ SAE-102: Créer une librairie partagée pour réutilisation du code - Done
-- 🔄 SAE-103: Add comprehensive documentation and Linear-GitHub integration - In Review
-- ⏸️ SAE-99: Analyse Temporelle des Avis - Backlog
-- ⏸️ SAE-100: Analyse Géographique (Villes/États) - Backlog
-- ⏸️ SAE-101: Analyse de Corrélation Multi-variables - Backlog
-
-### **Stories de configuration (Meta)**
-
-- ⏸️ SAE-55: [Epic 1] Configuration Repository GitHub Collaboratif - Backlog
-- ⏸️ SAE-56: [Epic 1] Setup Système Documentation par Story - Backlog
-- ⏸️ SAE-57: [Epic 1] Configuration Linear comme Source de Vérité + Intégration GitHub - Backlog
-
-**TOTAL EPIC 6:** 18 points (~18-20h)
+| Issue | Titre | Notebook | Grille | État |
+|-------|-------|----------|--------|------|
+| **SAE-113** | Deep Learning sur TF-IDF (MLP) | `5-deep-learning/01-deep-tfidf.ipynb` | Deep-tf-idf (1pt) + Arch Deep plusieurs (4pts) | ⬜ Todo |
+| **SAE-115** | Deep Learning sur N-grammes (CNN 1D) | `5-deep-learning/02-deep-ngram.ipynb` | Deep-Ngram (1pt) | ⬜ Todo |
+| **SAE-119** | Fine-tuning DistilBERT | `5-deep-learning/03-deep-llm.ipynb` | Deep-LLM (1pt) | ⬜ Todo |
+| **SAE-124** | **IA Générative (Zero-shot, Few-shot, ABSA)** | `5-deep-learning/04-ia-generative.ipynb` | **Requis sujet B3** | ⬜ Todo |
 
 ---
 
-## 📊 Récapitulatif Global
+## Epic 6 - Inférence & Finalisation
 
-| Epic | Points | Heures estimées | Dates |
-|------|--------|-----------------|-------|
-| Epic 1 | 37 | 37-42h | 27 jan - 31 jan |
-| Epic 2 | 11 | 11-13h | 1 fév - 5 fév |
-| Epic 3 | 14 | 14-16h | 6 fév - 12 fév |
-| Epic 4 | 17 | 17-20h | 13 fév - 18 fév |
-| Epic 5 | 17 | 17-20h | 19 fév - 24 fév |
-| Epic 6 | 18 | 18-20h | 25 fév - 28 fév |
-| **TOTAL** | **114** | **114-131h** | **8 semaines** |
+| Issue | Titre | Notebook | Grille | État |
+|-------|-------|----------|--------|------|
+| **SAE-120** | Pipeline d'inférence optimal | `6-inference/01-modele-optimal.ipynb` | Modèle optimal (2pts) | ⬜ Todo |
+| **SAE-121** | Inférence sur données de test | `6-inference/02-inference-test.ipynb` | Inference test (3pts) | ⬜ Todo |
+| **SAE-122** | Nettoyage code & fichiers inutiles | — | Éviter pénalités (-3pts) | ⬜ Todo |
+| **SAE-123** | Tests pytest | `tests/` | — | ⬜ Todo |
 
-**Charge par personne:** ~28-33h (équipe de 4)
+**Dépendances:** SAE-120 bloqué par tous les modèles ML + Deep. SAE-121 bloqué par SAE-120.
 
 ---
 
-## ✅ Cohérence du Plan
+## Grille de notation → Score visé: 24/24
 
-### 1. **Dépendances respectées**
-- ✅ Epic 1 → Epic 2 (données nettoyées → preprocessing)
-- ✅ Epic 2 → Epic 3 (texte preprocessé → vectorisation)
-- ✅ Epic 3 → Epic 4 (vecteurs → ML)
-- ✅ Epic 4 → Epic 5 (baseline ML → comparaison LLM)
-- ✅ Epic 5 → Epic 6 (analyses terminées → documentation)
+| Critère | Pts | Issue(s) |
+|---------|-----|----------|
+| Préparation données | 1 | ✅ Epic 1 |
+| Fonctions inutiles (éviter) | 0 | SAE-122 |
+| Sélection variables | 1 | SAE-118 |
+| Copie/coller naïf (éviter) | 0 | SAE-122 |
+| Repr N-grammes | 1 | ✅ SAE-76 |
+| Repr TF-IDF | 1 | ✅ SAE-76 |
+| LLM | 1 | SAE-112 |
+| ML classiques (plusieurs) | **4** | SAE-114/116/117 |
+| ML + ngram | 1 | SAE-116 |
+| ML + tf-idf | 1 | SAE-114 |
+| ML + LLM | 1 | SAE-117 |
+| Arch Deep (plusieurs) | **4** | SAE-113/115/119 |
+| Deep-Ngram | 1 | SAE-115 |
+| Deep-tf-idf | 1 | SAE-113 |
+| Deep-LLM | 1 | SAE-119 |
+| Modèle optimal | 2 | SAE-120 |
+| Inference test | **3** | SAE-121 |
+| **TOTAL** | **24** | |
 
-### 2. **Progression logique**
-```
-Données brutes (JSON)
-    ↓
-Données nettoyées (Parquet)
-    ↓
-Texte preprocessé (tokenized, lemmatized)
-    ↓
-Représentations vectorielles (TF-IDF, Word2Vec)
-    ↓
-Modèles ML (Classification, Clustering)
-    ↓
-LLMs (BERT, HuggingFace)
-    ↓
-Documentation et présentation
-```
-
-### 3. **Outputs clairs**
-
-**Epic 1:**
-- `data/cleaned/business_clean.parquet`
-- `data/cleaned/reviews_clean.parquet`
-- `data/cleaned/users_clean.parquet`
-- Dashboards d'analyse exploratoire
-
-**Epic 2:**
-- Colonne `text_preprocessed` dans reviews
-- Fonction `preprocess_pipeline()` réutilisable
-
-**Epic 3:**
-- Matrices TF-IDF
-- Modèles Word2Vec entraînés
-- Visualisations embeddings
-
-**Epic 4:**
-- Modèles de classification entraînés
-- Clusters identifiés
-- Système de recommandation
-
-**Epic 5:**
-- Modèles BERT fine-tunés
-- Résumés générés
-- Comparaison performances
-
-**Epic 6:**
-- Notebook final complet
-- Rapport PDF (5-10 pages)
-- Présentation PowerPoint
-
-### 4. **Analyses du sujet couvertes**
-
-✅ **Dashboard 1 - Profils Reviewers** (SAE-67)
-- Sévérité des experts
-- Niveau de détail
-- Segmentation reviewers
-
-✅ **Dashboard 2 - Performance Établissements** (SAE-68)
-- Répartition par catégorie
-- Volume vs Note
-- Impact visuel (photos)
-
-✅ **Dashboard 3 - Analyse Sémantique** (SAE-95)
-- Longueur vs Note
-- Duel des mots (TF-IDF Word Clouds)
-- Indice de satisfaction
-
-✅ **Focus sur les 3 dashboards du sujet uniquement**
-
-### 5. **Équilibrage de la charge**
-
-**Epic 1 (45pts)** = Plus lourd car:
-- Setup initial
-- 3 datasets à nettoyer
-- 6 dashboards/analyses
-
-**Epics 2-5 (11-17pts chacun)** = Équilibrés
-- Tâches techniques spécialisées
-- Charge répartie sur les membres
-
-**Epic 6 (18pts)** = Finalisation
-- Documentation
-- Polissage
-- Préparation présentation
+> **Note:** SAE-124 (IA Générative) est requis par le sujet PDF (section B3) mais n'a pas de points directs dans la grille.
 
 ---
 
-## 🚨 Points d'attention
+## Ordre d'exécution
 
-### Risques identifiés
-
-1. **Epic 1 chargé (37pts)**
-   - **Mitigation:** Paralléliser les tâches entre membres de l'équipe
-   - Setup (SAE-58-63): Personne A
-   - Chargement (SAE-64-66): Personne B
-   - Nettoyage (SAE-96-98): Personne C
-   - Dashboards (SAE-67-68-95): Personne D (peut être partagé)
-
-2. **Dépendances strictes**
-   - **Mitigation:** Ne pas commencer un Epic avant que le précédent soit validé
-   - Checkpoint après chaque Epic
-
-3. **Taille du dataset**
-   - **Mitigation:** SAE-69 (Échantillonnage) disponible si nécessaire
-   - Tester sur petit échantillon d'abord
-
-4. **Temps pour LLMs (Epic 5)**
-   - **Mitigation:** Fine-tuning optionnel (SAE-50)
-   - Priorité sur BERT classification et génération résumés
-
----
-
-## 📝 Recommandations
-
-### Pour Epic 1 (urgent)
-
-**Priorité 1 (Cette semaine):**
-1. SAE-58, 59, 60, 61 → Setup complet ✅
-2. SAE-62 → Intégration Linear ↔ GitHub
-3. SAE-64, 65, 66 → Chargement des 3 fichiers JSON
-4. SAE-96, 97, 98 → Nettoyage des données
-
-**Priorité 2 (Semaine prochaine):**
-5. SAE-67, 68, 95 → Les 3 dashboards du sujet
-
-### Organisation équipe
-
-**Semaine 1 (Epic 1):**
-- **Personne A:** Setup + Linear (SAE-58-62)
-- **Personne B:** Chargement Business + Users (SAE-64, 66)
-- **Personne C:** Chargement Reviews + Nettoyage (SAE-65, 97)
-- **Personne D:** Nettoyage Business + Users (SAE-96, 98)
-
-**Semaine 2 (Epic 1 fin + Epic 2 début):**
-- **Tous:** Dashboards en parallèle (SAE-67, 68, 95)
-- **Personne A + B:** Epic 2 (Preprocessing)
-
----
-
-## 🎯 Jalons (Milestones)
-
-- **31 jan:** Epic 1 terminé ✅ Données chargées et nettoyées
-- **5 fév:** Epic 2 terminé ✅ Texte preprocessé
-- **12 fév:** Epic 3 terminé ✅ Représentations vectorielles
-- **18 fév:** Epic 4 terminé ✅ Modèles ML
-- **24 fév:** Epic 5 terminé ✅ LLMs testés
-- **28 fév:** Epic 6 terminé ✅ Rendu final
-
----
-
-**Conclusion:** Le plan est cohérent, les dépendances sont claires, et les charges sont équilibrées. Epic 1 est le plus critique et doit être priorisé dès maintenant.
+1. SAE-112 — LLM embeddings (pré-requis)
+2. SAE-114 + SAE-116 — ML TF-IDF + ML N-grammes (parallélisable)
+3. SAE-117 — ML LLM (après SAE-112)
+4. SAE-118 — Sélection variables
+5. SAE-113 + SAE-115 — Deep TF-IDF + Deep N-grammes (parallélisable)
+6. SAE-119 — Fine-tuning DistilBERT
+7. SAE-124 — IA Générative (zero-shot, few-shot, ABSA)
+8. SAE-120 — Pipeline optimal
+9. SAE-121 — Inference test
+10. SAE-122 + SAE-123 — Nettoyage + tests
