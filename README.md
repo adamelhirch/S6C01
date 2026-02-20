@@ -64,6 +64,20 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk
 
 Placer les fichiers JSON Yelp dans `data/raw/`.
 
+### Ollama (IA Générative)
+
+Pour la partie IA Générative (zero-shot, few-shot, ABSA), installer [Ollama](https://ollama.com) puis :
+
+```bash
+ollama pull deepseek-r1:8b
+```
+
+Vérifier que le modèle est disponible :
+
+```bash
+ollama list
+```
+
 ## Workflow
 
 1. Prendre une issue sur [Linear](https://linear.app/sae6c01)
