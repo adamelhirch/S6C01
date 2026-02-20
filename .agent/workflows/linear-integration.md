@@ -22,8 +22,8 @@ Attacher le lien de la branche à la story Linear :
   "links": [
     ...liens_existants,
     {
-      "title": "Branche GitHub: adam/sae-XX-description",
-      "url": "https://github.com/adamelhirch/S6C01/tree/adam/sae-XX-description"
+      "title": "Branche GitHub: {prenom}/sae-XX-description",
+      "url": "https://github.com/adamelhirch/S6C01/tree/{prenom}/sae-XX-description"
     }
   ]
 }

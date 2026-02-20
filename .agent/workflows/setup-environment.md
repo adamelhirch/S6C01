@@ -23,7 +23,6 @@ python3 --version
 ### 2. Créer l'environnement virtuel
 
 ```bash
-cd "/Users/adamelhirch/Documents/BUT/Semestre 6/S6C01"
 python3 -m venv venv
 ```
 

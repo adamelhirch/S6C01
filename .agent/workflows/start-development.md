@@ -21,17 +21,27 @@ git checkout main
 git pull origin main
 ```
 
-### 3. Créer la branche Git
+### 3. Détecter l'utilisateur courant
 
-Format: `adam/sae-XX-description-courte` (kebab-case)
-
-Utilise le `gitBranchName` de l'issue Linear si disponible, sinon construis-le.
+Récupérer le prénom de l'utilisateur Git pour nommer la branche :
 
 ```bash
-git checkout -b adam/sae-XX-description-courte
+git config user.name
 ```
 
-### 4. Lier la branche à Linear
+Extraire le **prénom en minuscules** (ex: `Adam El Hirch` → `adam`, `Natalia Ros` → `natalia`).
+
+### 4. Créer la branche Git
+
+Format: `{prenom}/sae-XX-description-courte` (kebab-case)
+
+Utilise le `gitBranchName` de l'issue Linear si disponible, sinon construis-le avec le prénom détecté.
+
+```bash
+git checkout -b {prenom}/sae-XX-description-courte
+```
+
+### 5. Lier la branche à Linear
 
 Récupère d'abord les liens existants de l'issue, puis AJOUTE le lien de branche :
 
@@ -41,8 +51,8 @@ Récupère d'abord les liens existants de l'issue, puis AJOUTE le lien de branch
   "links": [
     ...liens_existants,
     {
-      "title": "Branche GitHub: adam/sae-XX-description",
-      "url": "https://github.com/adamelhirch/S6C01/tree/adam/sae-XX-description"
+      "title": "Branche GitHub: {prenom}/sae-XX-description",
+      "url": "https://github.com/adamelhirch/S6C01/tree/{prenom}/sae-XX-description"
     }
   ],
   "state": "In Progress"
@@ -51,13 +61,13 @@ Récupère d'abord les liens existants de l'issue, puis AJOUTE le lien de branch
 
 **IMPORTANT** : Toujours AJOUTER aux liens existants, JAMAIS les remplacer.
 
-### 5. Activer le venv
+### 6. Activer le venv
 
 ```bash
 source venv/bin/activate
 ```
 
-### 6. Charger le contexte
+### 7. Charger le contexte
 
 Lire les fichiers clés :
 1. L'issue complète Linear (description, checklist)
@@ -65,11 +75,11 @@ Lire les fichiers clés :
 3. `docs/PROJECT-PLAN.md` pour la grille de notation
 4. Les fichiers `src/` pertinents
 
-### 7. Confirmer
+### 8. Confirmer
 
 Afficher un résumé :
 - Issue : SAE-XX - Titre
-- Branche : adam/sae-XX-description
+- Branche : {prenom}/sae-XX-description
 - Notebook cible : (si mentionné dans l'issue)
 - Status Linear : In Progress ✅
 - Lien branche ajouté sur Linear ✅
