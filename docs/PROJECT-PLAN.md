@@ -36,11 +36,11 @@
 
 ---
 
-## Epic 3 - Text Representation ✅ (+ 1 ajout)
+## Epic 3 - Text Representation (+ 2 ajouts)
 
 | Issue | Titre | Notebook | Grille | État |
 |-------|-------|----------|--------|------|
-| SAE-75 | TF-IDF basique | `3-text-representation/` | — | ✅ Done |
+| **SAE-75** | **TF-IDF basique** | `3-text-representation/01-tfidf-basique.ipynb` | — | ⬜ Todo |
 | SAE-76 | TF-IDF optimisé (n-grams) | `3-text-representation/` | Repr N-grammes (1pt) + TF-IDF (1pt) | ✅ Done |
 | SAE-77 | Word2Vec training | `3-text-representation/` | — | ✅ Done |
 | SAE-78 | Document embeddings | `3-text-representation/` | — | ✅ Done |
