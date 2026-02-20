@@ -9,7 +9,6 @@ description: Lancer Jupyter et travailler avec les notebooks
 ### 1. Activer le venv
 
 ```bash
-cd "/Users/adamelhirch/Documents/BUT/Semestre 6/S6C01"
 source venv/bin/activate
 ```
 

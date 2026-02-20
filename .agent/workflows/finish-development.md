@@ -16,7 +16,7 @@ Déterminer l'issue à partir de la branche actuelle :
 git branch --show-current
 ```
 
-Le format est `adam/sae-XX-description` → extraire `SAE-XX`.
+Le format est `{prenom}/sae-XX-description` → extraire `SAE-XX`.
 
 Récupérer l'issue complète sur Linear.
 
