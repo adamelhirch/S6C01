@@ -42,6 +42,7 @@ data/**/*.csv
 !data/README.md
 *.pkl
 *.pickle
+*.pt
 
 # IDE
 .vscode/
