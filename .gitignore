@@ -58,6 +58,9 @@ Thumbs.db
 outputs/*.png
 outputs/*.jpg
 outputs/*.pdf
+outputs/*.npy
+outputs/*.ipynb
+outputs/figures/
 
 # BMAD et Claude (configuration locale)
 _bmad/
