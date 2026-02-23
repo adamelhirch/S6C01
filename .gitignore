@@ -63,6 +63,7 @@ outputs/*.pdf
 outputs/*.npy
 outputs/*.ipynb
 outputs/figures/
+notebooks/outputs/
 
 # BMAD, Claude et agent (configuration locale)
 _bmad/
