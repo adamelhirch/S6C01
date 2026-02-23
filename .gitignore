@@ -25,6 +25,7 @@ MANIFEST
 
 # Virtual environments
 venv/
+.venv/
 env/
 ENV/
 env.bak/
@@ -63,11 +64,12 @@ outputs/*.npy
 outputs/*.ipynb
 outputs/figures/
 
-# BMAD et Claude (configuration locale)
+# BMAD, Claude et agent (configuration locale)
 _bmad/
 _bmad-output/
 .claude/
 .claude-project.md
+.agent/
 
 # Sujet (fichiers PDF volumineux)
 sujet/**/*.pdf
