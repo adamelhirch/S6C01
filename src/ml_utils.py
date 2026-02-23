@@ -53,7 +53,10 @@ def get_param_grids(use_gaussian_nb=False):
 
     return {
         'Logistic Regression': {
-            'model': LogisticRegression(max_iter=1000, random_state=RANDOM_STATE, n_jobs=-1),
+            'model': LogisticRegression(
+                max_iter=1000, random_state=RANDOM_STATE, n_jobs=-1,
+                class_weight='balanced'
+            ),
             'params': {
                 'C': [0.01, 0.1, 1, 10],
                 'penalty': ['l1', 'l2'],
@@ -61,14 +64,20 @@ def get_param_grids(use_gaussian_nb=False):
             }
         },
         'Linear SVC': {
-            'model': LinearSVC(random_state=RANDOM_STATE, max_iter=2000, dual='auto'),
+            'model': LinearSVC(
+                random_state=RANDOM_STATE, max_iter=2000, dual='auto',
+                class_weight='balanced'
+            ),
             'params': {
                 'C': [0.01, 0.1, 1, 10],
                 'loss': ['hinge', 'squared_hinge'],
             }
         },
         'Random Forest': {
-            'model': RandomForestClassifier(random_state=RANDOM_STATE, n_jobs=-1),
+            'model': RandomForestClassifier(
+                random_state=RANDOM_STATE, n_jobs=-1,
+                class_weight='balanced'
+            ),
             'params': {
                 'n_estimators': [100, 200],
                 'max_depth': [10, 30, None],
