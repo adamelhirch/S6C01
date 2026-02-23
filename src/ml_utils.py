@@ -47,9 +47,24 @@ def split_data(X, y_polarity, y_score):
 
 
 def get_param_grids(use_gaussian_nb=False):
-    """Retourne les grilles d'hyperparamètres pour les 4 algorithmes ML."""
-    nb_class = GaussianNB() if use_gaussian_nb else MultinomialNB()
-    nb_params = {} if use_gaussian_nb else {'alpha': [0.01, 0.1, 0.5, 1.0, 2.0]}
+    """Retourne les grilles d'hyperparamètres pour les 4 algorithmes ML.
+
+    Grilles optimisées empiriquement (voir scripts/optimize_models.py) :
+    - use_gaussian_nb=False → TF-IDF/N-grammes (sparse) : saga, C plus élevé
+    - use_gaussian_nb=True  → Embeddings LLM (dense)   : lbfgs, C plus bas
+    """
+    if use_gaussian_nb:
+        # Embeddings denses → lbfgs (rapide), C bas, var_smoothing pour NB
+        solver, penalty = ['lbfgs'], ['l2']
+        c_values = [0.001, 0.01, 0.1, 1, 10]
+        nb_class = GaussianNB()
+        nb_params = {'var_smoothing': [1e-11, 1e-10, 1e-9, 1e-8, 1e-7]}
+    else:
+        # TF-IDF sparse → saga (supporte L1), C plus élevé
+        solver, penalty = ['saga'], ['l1', 'l2']
+        c_values = [0.01, 0.1, 1, 10, 50]
+        nb_class = MultinomialNB()
+        nb_params = {'alpha': [0.01, 0.1, 0.5, 1.0, 2.0]}
 
     return {
         'Logistic Regression': {
@@ -58,9 +73,9 @@ def get_param_grids(use_gaussian_nb=False):
                 class_weight='balanced'
             ),
             'params': {
-                'C': [0.01, 0.1, 1, 10],
-                'penalty': ['l1', 'l2'],
-                'solver': ['saga'],
+                'C': c_values,
+                'penalty': penalty,
+                'solver': solver,
             }
         },
         'Linear SVC': {
@@ -69,8 +84,7 @@ def get_param_grids(use_gaussian_nb=False):
                 class_weight='balanced'
             ),
             'params': {
-                'C': [0.01, 0.1, 1, 10],
-                'loss': ['hinge', 'squared_hinge'],
+                'C': c_values,
             }
         },
         'Random Forest': {
